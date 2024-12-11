@@ -16,6 +16,29 @@ fn main() {
     let sample_parse: Result<u32, _> = sample.parse();
     match sample_parse {
         Ok(_) => println!("Hurray! [sample] is parsed as unsigned INT"),
-        Err(_e) => println!("Nah! Are you sure [sample] is positive INT or INT at all?"),
+        Err(_e) => println!("ERROR:: Are you sure [sample] is positive INT or INT at all?"),
     }
+
+    // Cool feature of RUST :D
+    let suffix_literal = -57i8;
+    println!("Suffix Literal => {}", suffix_literal.to_string());
+    
+    let suffix_literal = 57u8;
+    println!("Suffix Literal => {}", suffix_literal.to_string());
+
+    let suffix_literal = 64usize;
+    println!("Suffix Literal => {}", suffix_literal.to_string());
+
+    // Another Cool feature of RUST=> Visual Separator
+    let easier_to_read = 1_00_000;
+    println!("Easier To Read => {}", easier_to_read.to_string());
+
+    let my_int = 98_222;
+    let my_int = 0xff;
+    let my_int = 0o77;
+
+    // Let's create overflow-int
+    let overflow_int = 255u8;
+    // Now, technically its incorrect and it will throw error... coz u8 can only hold values between 0-255
+
 }
