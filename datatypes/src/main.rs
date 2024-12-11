@@ -57,4 +57,14 @@ fn main() {
     // Boolean
     let my_bool = false;
     println!("my_bool: {}", my_bool);
+
+    // Chars
+    let my_str = "Hello World!";
+    let my_char: char = 'Z';
+    let my_emoji = "😻";
+
+    println!("My String: {}", my_str);
+    println!("My Char: {}", my_char);
+    println!("My Emoji: {}", my_emoji);
+    
 }
