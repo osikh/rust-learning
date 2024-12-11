@@ -38,7 +38,23 @@ fn main() {
     let my_int = 0o77;
 
     // Let's create overflow-int
-    let overflow_int = 255u8;
+    // let overflow_int = 256u8;
     // Now, technically its incorrect and it will throw error... coz u8 can only hold values between 0-255
 
+
+    // Float Type
+    let fx = 65.12;
+    let fy = 65.12f32;
+
+    // Calculation
+    println!("Add: fx+fy = {}", fx+fy);
+    println!("Sub: my_int-easier_to_read = {}", (my_int - easier_to_read));
+    println!("Product: my_int*2 = {}", my_int*2);
+    println!("Divide: my_int/4 = {}", my_int/4);
+    println!("Truncated: -5/3 = {}", -5/3);
+    println!("Remainder: 43%2 = {}", 43%2);
+
+    // Boolean
+    let my_bool = false;
+    println!("my_bool: {}", my_bool);
 }
