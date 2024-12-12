@@ -1,4 +1,5 @@
 use std::any::type_name;
+use std::io;
 
 fn get_typename<T>(_: &T) -> &str {
     return type_name::<T>();
@@ -66,5 +67,44 @@ fn main() {
     println!("My String: {}", my_str);
     println!("My Char: {}", my_char);
     println!("My Emoji: {}", my_emoji);
+
+    // Tuple
+    let tup = (my_int, my_bool, my_str);
+    println!("My Tuple: {}", tup.2);
+
+    let (x, y, z) = tup;
+    println!("My Tuple: {}", y);
+
+    // Array
+    let array1 = [1,2,3,4,5];
+
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    println!("Please entry index of month::");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line.");
+
+    let index: usize = index
+                        .trim()
+                        .parse()
+                        .expect("Please enter valid month index");
+
+    let month = months[index];
+
+    println!("Month:: {}", month);
+
+    let array2 = [100; 3];
+    
+    for n in array1 {
+        println!("array1 element: {}", n);
+    }
+
+    for n in array2 {
+        println!("array2 element: {}", n);
+    }
     
 }
