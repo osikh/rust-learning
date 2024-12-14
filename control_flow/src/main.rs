@@ -81,4 +81,31 @@ fn main() {
     };
 
     println!("{}", result);
+
+    // While loop
+    let mut i =3;
+    while i > 0 {
+        i = i-1;
+        println!("While loop: {}", i);
+    }
+
+    // for loop
+    for num in (0..3).rev() {
+        println!("For loop=> i: {}", num);
+    }
+    
+    // Loop through collection
+    // For-loop
+    let collection = [10, 20, 30, 40, 50];
+    for a in collection {
+        println!("For loop with collection=> a: {}", a);
+    }
+
+    // Loop through collection
+    // while-loop
+    let mut i = 0;
+    while i < collection.len() {
+        println!("While loop with collection=> a: {}", collection[i]);
+        i = i+1;
+    }
 }
