@@ -108,4 +108,26 @@ fn main() {
         println!("While loop with collection=> a: {}", collection[i]);
         i = i+1;
     }
+
+    // iterator [Breif only]
+    let iterator = 1..10; // from 1 to 9
+    let iterator = 1..=10; // from 0 to 10
+    let iterator = (0..=100).step_by(10); // 0, 10, 20.... 100
+    let iterator = (1..=10).rev(); // from 10 to 1
+    let iterator = (1..10).filter(|x| x%2 != 0);
+
+    // |x| is a closure in RUST just like lambda functions in other languages
+    // Basic Syntax: 
+    // |parameter| body
+
+    // so other way to apply filter()
+    fn is_odd(x: i32) -> bool {
+        x % 2 != 0
+    }
+    let iterator = (1..10).filter(|x| is_odd(*x)); // this is not cool looking right?
+    
+    for num in iterator {
+        println!("For loop with iterator=> i: {}", num);
+    }
+
 }
