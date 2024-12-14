@@ -54,4 +54,31 @@ fn main() {
     };
 
     println!("Another Loop.... Result: {}", result);
+
+    // Labeled Loop
+    let mut i =0;
+    let result = 'labeled_loop: loop {
+        println!("labeled_loop: i: {}", i);
+
+        let mut j = 3;
+        loop {
+            j = j-1;
+
+            println!("Running inner({}) loop...", j);
+
+            if j == 0 {
+                println!("Breaking inner({}) loop...", j);
+                break
+            }
+
+            if i == 2 {
+                println!("=> Breaking labeled_loop...");
+                break 'labeled_loop "=> Main loop done"
+            }
+        }
+
+        i = i+1;
+    };
+
+    println!("{}", result);
 }
