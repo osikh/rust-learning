@@ -1,17 +1,5 @@
 fn main() {
 
-    let mut i = 0;
-    loop {
-        println!("Loop... i: {}", i);
-        i = i+1;
-
-        if i == 10 {
-            break i = 100;
-        }
-    }
-
-    println!("index value: {}", i);
-
     let x = 5;
 
     if x > 5 {
@@ -40,4 +28,30 @@ fn main() {
     let x = if x > 5 { 6 } else { 4 };
 
     println!("now x value is changed to: {}", x);
+
+    let mut i = 0;
+    loop {
+        println!("Loop... i: {}", i);
+        i = i+1;
+
+        if i == 10 {
+            break i = 100;
+        }
+    }
+
+    println!("index value: {}", i);
+
+    // Another way to get result from loop
+    let mut i = 0;
+    let result = loop {
+        println!("Another Loop... i: {}", i);
+
+        i = i+1;
+
+        if i == 10 {
+            break "done" // expression or statement both works
+        }
+    };
+
+    println!("Another Loop.... Result: {}", result);
 }
